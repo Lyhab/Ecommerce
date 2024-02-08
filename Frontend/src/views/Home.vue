@@ -139,7 +139,7 @@
   
     <section class="service_section layout_padding ">
       <div class="container">
-        <h2 class="custom_heading">Our Services</h2>
+        <h2 class="custom_heading">PARTNER BRAND</h2>
         <p class="custom_heading-text">
           There are many variations of passages of Lorem Ipsum available, but
           the majority have
@@ -147,38 +147,32 @@
         <div class=" layout_padding2">
           <div class="card-deck">
             <div class="card">
-              <img class="card-img-top" src="" alt="Card image cap" />
+              <img class="card-img-top" src="../assets/images/Headphone.png" alt="Card image cap" style="width: 100px;" />
               <div class="card-body">
-                <h5 class="card-title">Orange</h5>
+                <h5 class="card-title">BEATS</h5>
                 <p class="card-text">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
+                  Bluetooth Wireless Headset Built in Noise Cancelling Mic Hands Free Bluetooth Earpiece Single Ear 
+                  Headphones Wireless for iPhone IOS Android Samsung Cell Phones PC TV Computer Game Trucker Driver Work.
                 </p>
               </div>
             </div>
             <div class="card">
-              <img class="card-img-top" src="" alt="Card image cap" />
+              <img class="card-img-top" src="../assets/images/Headphone.png" alt="Card image cap" style="width: 100px;" />
               <div class="card-body">
-                <h5 class="card-title">Grapes</h5>
+                <h5 class="card-title">APPLE</h5>
                 <p class="card-text">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
+                  Bluetooth Wireless Headset Built in Noise Cancelling Mic Hands Free Bluetooth Earpiece Single Ear 
+                  Headphones Wireless for iPhone IOS Android Samsung Cell Phones PC TV Computer Game Trucker Driver Work.
                 </p>
               </div>
             </div>
             <div class="card">
-              <img class="card-img-top" src="" alt="Card image cap" />
+              <img class="card-img-top" src="../assets/images/Headphone.png" alt="Card image cap" style="width: 100px;"/>
               <div class="card-body">
-                <h5 class="card-title">Gauva</h5>
+                <h5 class="card-title">SONY</h5>
                 <p class="card-text">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
+                  Bluetooth Wireless Headset Built in Noise Cancelling Mic Hands Free Bluetooth Earpiece Single Ear 
+                  Headphones Wireless for iPhone IOS Android Samsung Cell Phones PC TV Computer Game Trucker Driver Work.
                 </p>
               </div>
             </div>
@@ -199,7 +193,7 @@
 
     <section class="fruit_section">
       <div class="container">
-        <h2 class="custom_heading">Fresh Fruits</h2>
+        <h2 class="custom_heading">Feature Product</h2>
         <p class="custom_heading-text">
           There are many variations of passages of Lorem Ipsum available, but
           the majority have
@@ -230,13 +224,13 @@
     <!-- end fruits section -->
   
     <!-- tasty section -->
-    <section class="tasty_section">
+    <!-- <section class="tasty_section">
       <div class="container_fluid">
         <h2>
           Very tasty fruits
         </h2>
       </div>
-    </section>
+    </section> -->
   
     <!-- end tasty section -->
   
