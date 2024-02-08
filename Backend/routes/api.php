@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BrandController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group(['prefix' => 'v1'], function () {
     require(__DIR__ . '/api/main.php');
 });
+
+Route::get('/v1/product/', [ProductController::class, 'getAll']);
+Route::get('/v1/product/{id}', [ProductController::class, 'getById']);
+
+Route::get('/v1/brand/', [BrandController::class, 'getAll']);
+Route::get('/v1/brand/{id}', [BrandController::class, 'getById']);

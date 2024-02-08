@@ -14,7 +14,7 @@ class ProductController extends Controller
     {
         try {
 
-            $products = Product::paginate(12);
+            $products = Product::paginate(4);
 
             return response()->json($products, Response::HTTP_OK);
         } catch (ValidationException $e) {
