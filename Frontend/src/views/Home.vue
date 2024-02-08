@@ -210,7 +210,7 @@
               <div class="carousel-item active">
                 <div class="client_container layout_padding2">
                   <div class="client_img-box">
-                    <img src="" alt="" />
+                    <img src="../assets/images/IMG_2413.png" alt="" />
                   </div>
                   <div class="client_detail">
                     <h3>
