@@ -13,7 +13,7 @@ class BrandController extends Controller
     {
         try {
 
-            $brands = Brand::all();
+            $brands = Brand::paginate(3);
 
             return response()->json($brands, Response::HTTP_OK);
         } catch (ValidationException $e) {
