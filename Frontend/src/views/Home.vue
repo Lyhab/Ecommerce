@@ -13,15 +13,12 @@
                           <div>
                             <h1>
                               Welcome to <br />
-                              Our Fruits Shop
+                            SOUND 
                             </h1>
-                            <div>{{ products }}</div>
+                            <!-- <div>{{ products }}</div> -->
                             <p>
-                              There are many variations of passages of Lorem
-                              Ipsum available, but the majority have suffered
-                              alteration in some form, by injected humour, or
-                              randomised words which don't look even slightly
-                              believable.
+                              Bluetooth Headphones Over Ear, 65 Hours Playtime Wireless Headphones with Microphone,
+                              Foldable Lightweight Headset with Deep Bass,HiFi Stereo Sound for Travel Work Cellphone.
                             </p>
                             <div class="d-flex">
                               <a href="" class="text-uppercase custom_orange-btn mr-3">
@@ -37,7 +34,7 @@
                       <div class="col-md-6">
                         <div class="slider_img-box">
                           <div>
-                            <img src="" alt="" class="" />
+                            <img src="../assets/images/Headphone.png" alt="" style="width: 370px; margin-top: -40px; margin-left: 60px;" />
                           </div>
                         </div>
                       </div>
@@ -56,14 +53,11 @@
                           <div>
                             <h1>
                               Welcome to <br />
-                              Our Fruits Shop
+                              SOUND
                             </h1>
                             <p>
-                              There are many variations of passages of Lorem
-                              Ipsum available, but the majority have suffered
-                              alteration in some form, by injected humour, or
-                              randomised words which don't look even slightly
-                              believable.
+                              Bluetooth Headphones Over Ear, 65 Hours Playtime Wireless Headphones with Microphone,
+                              Foldable Lightweight Headset with Deep Bass,HiFi Stereo Sound for Travel Work Cellphone.
                             </p>
                             <div class="d-flex">
                               <a href="" class="text-uppercase custom_orange-btn mr-3">
@@ -79,7 +73,7 @@
                       <div class="col-md-6">
                         <div class="slider_img-box">
                           <div>
-                            <img src="" alt="" class="" />
+                            <img src="../assets/images/Headphone.png" alt="" style="width: 370px; margin-top: -40px; margin-left: 60px;" />
                           </div>
                         </div>
                       </div>
@@ -98,14 +92,11 @@
                           <div>
                             <h1>
                               Welcome to <br />
-                              Our Fruits Shop
+                              SOUND
                             </h1>
                             <p>
-                              There are many variations of passages of Lorem
-                              Ipsum available, but the majority have suffered
-                              alteration in some form, by injected humour, or
-                              randomised words which don't look even slightly
-                              believable.
+                              Bluetooth Headphones Over Ear, 65 Hours Playtime Wireless Headphones with Microphone,
+                              Foldable Lightweight Headset with Deep Bass,HiFi Stereo Sound for Travel Work Cellphone.
                             </p>
                             <div class="d-flex">
                               <a href="" class="text-uppercase custom_orange-btn mr-3">
@@ -121,7 +112,7 @@
                       <div class="col-md-6">
                         <div class="slider_img-box">
                           <div>
-                            <img src="" alt="" class="" />
+                            <img src="../assets/images/Headphone.png" alt="" style="width: 370px; margin-top: -40px; margin-left: 60px;" />
                           </div>
                         </div>
                       </div>
