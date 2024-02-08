@@ -53,7 +53,7 @@
                           <div>
                             <h1>
                               Welcome to <br />
-                              SOUND
+                              SOUNDs
                             </h1>
                             <p>
                               Bluetooth Headphones Over Ear, 65 Hours Playtime Wireless Headphones with Microphone,
@@ -139,64 +139,34 @@
   
     <section class="service_section layout_padding ">
       <div class="container">
-        <h2 class="custom_heading">PARTNER BRAND</h2>
+        <h2 class="custom_heading">Partner Brand</h2>
         <p class="custom_heading-text">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have
+          Elevate your lifestyle with our partner brand—innovative, stylish, and committed to excellence.
         </p>
         <div class=" layout_padding2">
-          <div class="card-deck">
-            <div class="card">
-              <img class="card-img-top" src="../assets/images/Headphone.png" alt="Card image cap" style="width: 100px;" />
-              <div class="card-body">
-                <h5 class="card-title">BEATS</h5>
-                <p class="card-text">
-                  Bluetooth Wireless Headset Built in Noise Cancelling Mic Hands Free Bluetooth Earpiece Single Ear 
-                  Headphones Wireless for iPhone IOS Android Samsung Cell Phones PC TV Computer Game Trucker Driver Work.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="../assets/images/Headphone.png" alt="Card image cap" style="width: 100px;" />
-              <div class="card-body">
-                <h5 class="card-title">APPLE</h5>
-                <p class="card-text">
-                  Bluetooth Wireless Headset Built in Noise Cancelling Mic Hands Free Bluetooth Earpiece Single Ear 
-                  Headphones Wireless for iPhone IOS Android Samsung Cell Phones PC TV Computer Game Trucker Driver Work.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="../assets/images/Headphone.png" alt="Card image cap" style="width: 100px;"/>
-              <div class="card-body">
-                <h5 class="card-title">SONY</h5>
-                <p class="card-text">
-                  Bluetooth Wireless Headset Built in Noise Cancelling Mic Hands Free Bluetooth Earpiece Single Ear 
-                  Headphones Wireless for iPhone IOS Android Samsung Cell Phones PC TV Computer Game Trucker Driver Work.
-                </p>
-              </div>
+        <div class="card-deck">
+          <div v-for="brand in brands.data" class="card">
+            <div class="card-body d-flex flex-column" style="gap: 15px;">
+              <h5 class="card-title" style="font-size: 50px;">{{brand.name}}</h5>
+              <p class="card-text">
+                {{brand.description}}
+              </p>
             </div>
           </div>
         </div>
-        <div class="d-flex justify-content-center">
-          <a href="" class="custom_dark-btn">
-            Read More
-          </a>
-        </div>
+      </div>
       </div>
     </section>
   
     <!-- end service section -->
   
-    <!-- fruits section -->
-    {{  }}
+
 
     <section class="fruit_section">
       <div class="container">
-        <h2 class="custom_heading">Feature Product</h2>
+        <h2 class="custom_heading">Featured Products</h2>
         <p class="custom_heading-text">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have
+          Discover our curated collection of featured products—a showcase of excellence and innovation. Each item is meticulously selected for its quality, style, and cutting-edge features. Elevate your experience with these standout products, setting a new standard in superior performance and design.
         </p>
         <div v-for="product in products.data" class="row layout_padding2">
           <div class="col-md-8">
@@ -223,14 +193,6 @@
   
     <!-- end fruits section -->
   
-    <!-- tasty section -->
-    <!-- <section class="tasty_section">
-      <div class="container_fluid">
-        <h2>
-          Very tasty fruits
-        </h2>
-      </div>
-    </section> -->
   
     <!-- end tasty section -->
   
@@ -238,10 +200,9 @@
   
     <section class="client_section layout_padding">
       <div class="container">
-        <h2 class="custom_heading">Testimonial</h2>
+        <h2 class="custom_heading">Founder</h2>
         <p class="custom_heading-text">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have
+          Meet the brilliant minds behind our platform—passionate founders dedicated to redefining your audio experience. Driven by innovation, they curate a selection that reflects expertise and a commitment to seamless shopping. Experience audio excellence crafted by our visionary founders.
         </p>
         <div>
           <div id="carouselExampleControls-2" class="carousel slide" data-ride="carousel">
@@ -249,18 +210,14 @@
               <div class="carousel-item active">
                 <div class="client_container layout_padding2">
                   <div class="client_img-box">
-                    <img src="" alt="" />
+                    <img src="../assets/images/RITHYNY_Lyhab.png" alt="" />
                   </div>
                   <div class="client_detail">
                     <h3>
-                      Johnhex
+                      RITHYNY Lyhab
                     </h3>
                     <p class="custom_heading-text">
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form, by injected humour, or randomised words which
-                      don't look even slightly believable. If you are <br />
-                      going to use a passage of Lorem Ipsum, you need to be sure
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo amet a sit in dolore inventore natus excepturi fugiat, impedit aliquid atque assumenda nobis voluptatem eligendi explicabo magnam? Amet, vero nemo.
                     </p>
                   </div>
                 </div>
@@ -272,14 +229,10 @@
                   </div>
                   <div class="client_detail">
                     <h3>
-                      Johnhex
+                      NENG Sopheap
                     </h3>
                     <p class="custom_heading-text">
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form, by injected humour, or randomised words which
-                      don't look even slightly believable. If you are <br />
-                      going to use a passage of Lorem Ipsum, you need to be sure
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eos neque qui, corrupti cupiditate quod in, ratione quasi distinctio id quidem libero earum tempora temporibus repellat error voluptas debitis voluptatem.
                     </p>
                   </div>
                 </div>
@@ -291,14 +244,10 @@
                   </div>
                   <div class="client_detail">
                     <h3>
-                      Johnhex
+                      SENG Enghav
                     </h3>
                     <p class="custom_heading-text">
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form, by injected humour, or randomised words which
-                      don't look even slightly believable. If you are <br />
-                      going to use a passage of Lorem Ipsum, you need to be sure
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates illum aliquid maxime aperiam temporibus, tenetur animi harum ipsam doloribus sapiente eos ab, magnam autem quidem, quasi asperiores fuga fugiat voluptatem.
                     </p>
                   </div>
                 </div>
