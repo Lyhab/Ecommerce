@@ -1,5 +1,5 @@
 <template>
-  <section class="fruit_section layout_padding-top">
+  <section class="brand_section layout_padding-top">
     <div class="container">
       <h2 class="custom_heading">Partnered Brands</h2>
       <p class="custom_heading-text">
@@ -7,7 +7,7 @@
       </p>
       <div v-for="brand in fetchedData.data" class="row layout_padding2">
         <div class="col-md-8">
-          <div class="fruit_detail-box">
+          <div class="brand_detail-box">
             <h3>
               {{ brand.name }}
             </h3>
@@ -21,7 +21,7 @@
         </div>
         <div class="col-md-4 d-flex justify-content-center align-items-center">
           <div
-            class="fruit_img-box d-flex justify-content-center align-items-center"
+            class="brand_img-box d-flex justify-content-center align-items-center"
           >
             <img
               :src="`http://127.0.0.1:8000/${brand.image}`"
@@ -94,7 +94,6 @@
     data() {
       return {
         fetchedData: [],
-        brands: [],
         brandEndPoint: "http://127.0.0.1:8000/api/v1/brand",
       };
     },
