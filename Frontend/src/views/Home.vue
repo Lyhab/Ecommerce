@@ -196,9 +196,9 @@
   
     <!-- end tasty section -->
   
-    <!-- client section -->
+    <!-- founder section -->
   
-    <section class="client_section layout_padding">
+    <section class="founder_section layout_padding">
       <div class="container">
         <h2 class="custom_heading">Founder</h2>
         <p class="custom_heading-text">
@@ -208,11 +208,11 @@
           <div id="carouselExampleControls-2" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="client_container">
-                  <div class="client_img-box">
+                <div class="founder_container layout_padding2">
+                  <div class="founder_img-box">
                     <img src="../assets/images/RITHYNY_Lyhab.png" alt="" />
                   </div>
-                  <div class="client_detail">
+                  <div class="founder_detail">
                     <h3>
                       RITHYNY Lyhab
                     </h3>
@@ -223,11 +223,11 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="client_container layout_padding2">
-                  <div class="client_img-box">
+                <div class="founder_container layout_padding2">
+                  <div class="founder_img-box">
                     <img src="../assets/images/NENG_Sopheap.png" alt="" />
                   </div>
-                  <div class="client_detail">
+                  <div class="founder_detail">
                     <h3>
                       NENG Sopheap
                     </h3>
@@ -238,11 +238,11 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="client_container layout_padding2">
-                  <div class="client_img-box">
+                <div class="founder_container layout_padding2">
+                  <div class="founder_img-box">
                     <img src="../assets/images/SENG_Enghav.png" alt="" />
                   </div>
-                  <div class="client_detail">
+                  <div class="founder_detail">
                     <h3>
                       SENG Enghav
                     </h3>
@@ -269,7 +269,7 @@
       </div>
     </section>
   
-    <!-- end client section -->
+    <!-- end founder section -->
   
     <!-- contact section -->
     <section class="contact_section layout_padding">
@@ -321,8 +321,8 @@
 
 <script>
 import fetchData from '../services/fetchData';
-import {RiArrowRightLine} from 'vue-remix-icons';
-import {RiArrowLeftLine} from 'vue-remix-icons';
+import { RiArrowRightLine } from 'vue-remix-icons';
+import { RiArrowLeftLine } from 'vue-remix-icons';
 
 export default{
     components:{

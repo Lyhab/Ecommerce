@@ -135,19 +135,9 @@
                 Follow Us
               </h5>
               <div class="social-box">
-                <a href="">
-                  <img src="" alt="">
-                </a>
-  
-                <a href="">
-                  <img src="" alt="">
-                </a>
-                <a href="">
-                  <img src="" alt="">
-                </a>
-                <a href="">
-                  <img src="" alt="">
-                </a>
+                <a href=""><RiFacebookCircleFill style="width:50px; color:black;" /></a>
+                <a href=""><RiInstagramFill style="width:50px; color:black;" /></a>
+                <a href=""><RiTiktokFill style="width:50px; color:black;" /></a>
               </div>
             </div>
             <div class="subscribe_container">
@@ -183,6 +173,9 @@
 
 <script>
 import {RiUserLine} from 'vue-remix-icons'
+import { RiFacebookCircleFill } from 'vue-remix-icons'
+import { RiInstagramFill } from 'vue-remix-icons'
+import { RiTiktokFill } from 'vue-remix-icons'
 
 export default{
   methods: {
@@ -192,6 +185,9 @@ export default{
   },
   components:{
     RiUserLine,
+    RiFacebookCircleFill,
+    RiInstagramFill,
+    RiTiktokFill,
   }
 }
 </script>
