@@ -13,7 +13,7 @@
                           <div>
                             <h1>
                               Welcome to <br />
-                            SOUND 
+                            SOUND123
                             </h1>
                             <!-- <div>{{ products }}</div> -->
                             <p>
@@ -124,10 +124,10 @@
           </div>
           <div class="custom_carousel-control">
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="sr-only">Previous</span>
+              <span><RiArrowLeftLine style="color: white; width: 25px;"/></span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="sr-only">Next</span>
+              <span><RiArrowRightLine style="color: white; width: 25px;"/></span>
             </a>
           </div>
         </div>
@@ -139,7 +139,7 @@
   
     <section class="service_section layout_padding ">
       <div class="container">
-        <h2 class="custom_heading">Partner Brand</h2>
+        <h2 class="custom_heading">Partnered Brands</h2>
         <p class="custom_heading-text">
           Elevate your lifestyle with our partner brand—innovative, stylish, and committed to excellence.
         </p>
@@ -162,7 +162,7 @@
   
 
 
-    <section class="fruit_section">
+    <section class="headphone_section">
       <div class="container">
         <h2 class="custom_heading">Featured Products</h2>
         <p class="custom_heading-text">
@@ -170,9 +170,9 @@
         </p>
         <div v-for="product in products.data" class="row layout_padding2">
           <div class="col-md-8">
-            <div class="fruit_detail-box">
+            <div class="headphone_detail-box">
               <h3>
-                {{ product.name }}
+                {{ product.model }}
               </h3>
               <p class="mt-4 mb-5">
                 {{ product.description }}
@@ -183,7 +183,7 @@
             </div>
           </div>
           <div class="col-md-4 d-flex justify-content-center align-items-center">
-            <div class="fruit_img-box d-flex justify-content-center align-items-center">
+            <div class="headphone_img-box d-flex justify-content-center align-items-center">
               <img :src="`http://127.0.0.1:8000/${product.image}`" alt="" class="" width="250px" />
             </div>
           </div>
@@ -208,7 +208,7 @@
           <div id="carouselExampleControls-2" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="client_container layout_padding2">
+                <div class="client_container">
                   <div class="client_img-box">
                     <img src="../assets/images/RITHYNY_Lyhab.png" alt="" />
                   </div>
@@ -225,7 +225,7 @@
               <div class="carousel-item">
                 <div class="client_container layout_padding2">
                   <div class="client_img-box">
-                    <img src="" alt="" />
+                    <img src="../assets/images/NENG_Sopheap.png" alt="" />
                   </div>
                   <div class="client_detail">
                     <h3>
@@ -240,7 +240,7 @@
               <div class="carousel-item">
                 <div class="client_container layout_padding2">
                   <div class="client_img-box">
-                    <img src="" alt="" />
+                    <img src="../assets/images/SENG_Enghav.png" alt="" />
                   </div>
                   <div class="client_detail">
                     <h3>
@@ -256,11 +256,11 @@
             <div class="custom_carousel-control">
               <a class="carousel-control-prev" href="#carouselExampleControls-2" role="button" data-slide="prev">
                 <span class="" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+                <span><RiArrowLeftLine style="color: white; width: 25px;"/></span>
               </a>
               <a class="carousel-control-next" href="#carouselExampleControls-2" role="button" data-slide="next">
                 <span class="" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+                <span><RiArrowRightLine style="color: white; width: 25px;"/></span>
               </a>
             </div>
   
@@ -321,8 +321,14 @@
 
 <script>
 import fetchData from '../services/fetchData';
+import {RiArrowRightLine} from 'vue-remix-icons';
+import {RiArrowLeftLine} from 'vue-remix-icons';
 
 export default{
+    components:{
+      RiArrowRightLine,
+      RiArrowLeftLine,
+    },
     data() {
         return{
             products:[],

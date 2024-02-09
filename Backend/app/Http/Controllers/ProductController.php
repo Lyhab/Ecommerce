@@ -43,8 +43,8 @@ class ProductController extends Controller
     {
         try {
             $data = $request->validate([
-                'name' => 'required|min:3',
-                'model' => 'required',
+                'model' => 'required|min:3',
+                'discount' => 'nullable',
                 'price' => 'required',
                 'description' => 'nullable|min:3',
                 'brand_id' => 'exists:brands,id',
@@ -69,8 +69,8 @@ class ProductController extends Controller
         try {
 
             $data = $request->validate([
-                'name' => 'nullable|min:3',
-                'model' => 'nullable',
+                'model' => 'nullable|min:3',
+                'discount' => 'nullable',
                 'price' => 'nullable',
                 'description' => 'nullable|min:3',
                 'brand_id' => 'exists:brands,id',

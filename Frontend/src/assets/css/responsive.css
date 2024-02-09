@@ -46,14 +46,14 @@
 
     }
 
-    .fruit_section .fruit_detail-box {
+    .headphone_section .headphone_detail-box {
 
         margin-bottom: 40px;
         text-align: center;
 
     }
 
-    .fruit_detail-box>div {
+    .headphone_detail-box>div {
 
         display: flex;
         justify-content: center;

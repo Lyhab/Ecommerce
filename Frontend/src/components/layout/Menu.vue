@@ -53,94 +53,79 @@
         <div class="row">
           <div class="col-md-3">
             <h5>
-              Fruits
+              Top Brands
             </h5>
             <ul>
               <li>
-                randomised
+                Anker
               </li>
               <li>
-                words which
+                Apple
               </li>
               <li>
-                don't look even
+                Beats
               </li>
               <li>
-                slightly
+                Bose
               </li>
               <li>
-                believable. If you
+                JBL
               </li>
               <li>
-                are going to use
+                Sennheiser
               </li>
               <li>
-                a passage of
+                Skullcandy
               </li>
               <li>
-                Lorem Ipsum,
+                Sony
               </li>
             </ul>
           </div>
           <div class="col-md-3">
             <h5>
-              Services
+              Our Company
             </h5>
             <ul>
               <li>
-                randomised
+                About us
               </li>
               <li>
-                words which
+                The headphone community
               </li>
               <li>
-                don't look even
+                Term of service
               </li>
               <li>
-                slightly
+                Privacy policy
               </li>
               <li>
-                believable. If you
-              </li>
-              <li>
-                are going to use
-              </li>
-              <li>
-                a passage of
-              </li>
-              <li>
-                Lorem Ipsum,
+                Accessibility Statement
               </li>
             </ul>
           </div>
           <div class="col-md-3">
             <h5>
-              List
+              Support
             </h5>
             <ul>
               <li>
-                randomised
+                365-day returns
               </li>
               <li>
-                words which
+                Track your order
               </li>
               <li>
-                don't look even
+                Shopping policy
               </li>
               <li>
-                slightly
+                Refund policy
               </li>
               <li>
-                believable. If you
+                FAQ
               </li>
               <li>
-                are going to use
-              </li>
-              <li>
-                a passage of
-              </li>
-              <li>
-                Lorem Ipsum,
+                Contact us
               </li>
             </ul>
           </div>
@@ -188,8 +173,7 @@
     <!-- footer section -->
     <section class="container-fluid footer_section">
       <p>
-        Copyright &copy; 2019 All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
+        Copyright &copy; 2024 All Rights Reserved By SOUND
       </p>
     </section>
     <!-- footer section -->
