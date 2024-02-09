@@ -17,7 +17,7 @@ return new class extends Migration
             $table->float('discount')->nullable();
             $table->float('price')->nullable(false);
             $table->text('description')->nullable();
-            $table->float('average_review')->nullable();
+            $table->string('brand');
             $table->unsignedBigInteger('brand_id')->default(2);
             $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
             $table->text('image')->nullable();

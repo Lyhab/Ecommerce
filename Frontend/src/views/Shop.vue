@@ -1,22 +1,21 @@
 <template>
   <section class="fruit_section layout_padding-top">
     <div class="container">
-      <h2 class="custom_heading">Fresh Fruits</h2>
+      <h2 class="custom_heading">Partnered Brands</h2>
       <p class="custom_heading-text">
-        There are many variations of passages of Lorem Ipsum available, but the
-        majority have
+        Elevate your lifestyle with our partner brand—innovative, stylish, and committed to excellence.
       </p>
-      <div v-for="product in fetchedData.data" class="row layout_padding2">
+      <div v-for="brand in fetchedData.data" class="row layout_padding2">
         <div class="col-md-8">
           <div class="fruit_detail-box">
             <h3>
-              {{ product.name }}
+              {{ brand.name }}
             </h3>
             <p class="mt-4 mb-5">
-              {{ product.description }}
+              {{ brand.description }}
             </p>
             <div>
-              <button @click="addToCart(product.id)" class="custom_dark-btn"> Add to cart </button>
+              <router-link :to="`/product/${brand.id}`" class="custom_dark-btn"> Explore </router-link>
             </div>
           </div>
         </div>
@@ -25,10 +24,10 @@
             class="fruit_img-box d-flex justify-content-center align-items-center"
           >
             <img
-              :src="`http://127.0.0.1:8000/${product.image}`"
+              :src="`http://127.0.0.1:8000/${brand.image}`"
               alt=""
               class=""
-              width="250px"
+              width="123px"
             />
           </div>
         </div>
@@ -40,7 +39,7 @@
       <ul class="pagination pagination-rounded mb-0 justify-content-end">
         <li class="page-item">
           <button
-            class="page-link"
+            class="page-link text-dark"
             @click="changePage(fetchedData.first_page_url)"
           >
             Previous
@@ -54,7 +53,8 @@
           <button
             v-if="index !== 0 && index !== fetchedData.links.length - 1"
             @click="changePage(item.url)"
-            class="page-link"
+            class="page-link btn-outline-dark"
+            :class="{ 'text-dark': !item.active, 'text-light': item.active, 'bg-dark': item.active, 'border-light': item.active}"
           >
             {{ index }}
           </button>
@@ -62,7 +62,7 @@
 
         <li class="page-item">
           <button
-            class="page-link"
+            class="page-link text-dark"
             @click="changePage(fetchedData.next_page_url)"
           >
             Next
@@ -74,101 +74,59 @@
 </template>
 
 <script>
-import {
-  RiHeart3Line,
-  RiShoppingCartLine,
-  RiArrowRightSLine,
-  RiStarSFill,
-} from "vue-remix-icons";
-import fetchData from "../services/fetchData.js";
-import { RouterLink } from "vue-router";
-export default {
-  components: {
-    RouterLink,
+  import {
+    RiHeart3Line,
     RiShoppingCartLine,
     RiArrowRightSLine,
-    RiHeart3Line,
     RiStarSFill,
-  },
-  data() {
-    return {
-      search: "",
-      fetchedData: [],
-      categories: [],
-      isLoading: false,
-      confirmDelete: false,
-      deleteItemId: null,
-      apiUrl: "http://127.0.0.1:8000/api/v1",
-      productEndPoint: "http://127.0.0.1:8000/api/v1/product",
-      categoryEndPoint: "/category",
-    };
-  },
-  mounted() {
-    this.getAllProducts();
-    this.getAllCategories();
-  },
-  methods: {
-    async getAllProducts() {
-      this.isLoading = true;
-      try {
-        this.fetchedData = await fetchData(
-          "GET",
-          `${this.productEndPoint}`,
-          null
-        );
-        this.isLoading = false;
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        this.isLoading = false;
-      }
+  } from "vue-remix-icons";
+  import fetchData from "../services/fetchData.js";
+  import { RouterLink } from "vue-router";
+  
+  export default {
+    components: {
+      RouterLink,
+      RiShoppingCartLine,
+      RiArrowRightSLine,
+      RiHeart3Line,
+      RiStarSFill,
     },
-    async handleSearch() {
-      this.isLoading = true;
-      try {
-        this.fetchedData = await fetchData(
-          "GET",
-          `${this.productEndPoint}?search=${this.search}`,
-          null
-        );
-        this.isLoading = false;
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        this.isLoading = false;
-      }
+    data() {
+      return {
+        fetchedData: [],
+        brands: [],
+        brandEndPoint: "http://127.0.0.1:8000/api/v1/brand",
+      };
     },
-    async getAllCategories() {
-      this.isLoading = true;
-      try {
-        this.categories = await fetchData(
-          "GET",
-          `${this.apiUrl}${this.categoryEndPoint}`,
-          null
-        );
-        this.isLoading = false;
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        this.isLoading = false;
-      }
+    mounted() {
+      this.getAllBrands();
     },
-    async filterByCategory(url) {
-      this.productEndPoint = "http://127.0.0.1:8000/api/v1/product";
-      this.productEndPoint = this.productEndPoint + url;
-      await this.getAllProducts();
+    methods: {
+      async getAllBrands() {
+        this.isLoading = true;
+        try {
+          this.fetchedData = await fetchData(
+            "GET",
+            `${this.brandEndPoint}`,
+            null
+          );
+          this.isLoading = false;
+        } catch (error) {
+          console.error("Error fetching data:", error);
+          this.isLoading = false;
+        }
+      },
+      async changePage(url) {
+        this.brandEndPoint = url;
+        await this.getAllBrands();
+      },
     },
-    async changePage(url) {
-      this.productEndPoint = url;
-      await this.getAllProducts();
-    },
-    async addToCart(productId) {
-      try {
-        // Access $route.params.id using this.$route
-        await fetchData("POST", "http://127.0.0.1:8000/api/v1/cart", {
-          product_id: productId,
-        });
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    },
-  },
-};
-</script>
+  };
+  </script>
+
+<style scoped>
+.page-item:active {
+  background-color: black;
+  color: white;
+}
+</style>

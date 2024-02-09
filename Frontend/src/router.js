@@ -6,6 +6,7 @@ import ContactVue from './views/Contact.vue'
 import LoginVue from './views/Login.vue'
 import RegisterVue from './views/Register.vue'
 import CartVue from './views/Cart.vue'
+import ProductByBrandVue from './views/ProductByBrand.vue';
 
 const routes = [
     {path: '/', name: 'homepage', component: HomeVue},
@@ -15,6 +16,7 @@ const routes = [
     {path: '/login', name: 'loginpage', component: LoginVue},
     {path: '/cart', name: 'cartpage', component: CartVue},
     {path: '/register', name: 'registerpage', component: RegisterVue},
+    {path: '/product/:brand_id', name: 'productpage', component: ProductByBrandVue},
 ]
 
 const router = createRouter({

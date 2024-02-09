@@ -2,7 +2,7 @@
     <div>
         <section class="hero_area slider_section position-relative">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
+          <div class="carousel-inner" v-if="products && products.data && products.data.length > 0">
             <div class="carousel-item active">
               <div class="slider_item-box">
                 <div class="slider_item-container">
@@ -13,20 +13,18 @@
                           <div>
                             <h1>
                               Welcome to <br />
-                            SOUND123
+                            SOUND
                             </h1>
-                            <!-- <div>{{ products }}</div> -->
                             <p>
-                              Bluetooth Headphones Over Ear, 65 Hours Playtime Wireless Headphones with Microphone,
-                              Foldable Lightweight Headset with Deep Bass,HiFi Stereo Sound for Travel Work Cellphone.
+                              "SOUND" - Your Gateway to Sonic Excellence. Immerse yourself in a world of audio perfection with our curated collection of premium headphones. Elevate your auditory experience and discover the harmony of superior sound quality, cutting-edge technology, and stylish design. Explore SOUND – where every beat, note, and melody comes to life.
                             </p>
                             <div class="d-flex">
-                              <a href="" class="text-uppercase custom_orange-btn mr-3">
+                              <router-link to="/shop" href="" class="text-uppercase custom_orange-btn mr-3">
                                 Shop Now
-                              </a>
-                              <a href="" class="text-uppercase custom_dark-btn">
+                              </router-link>
+                              <router-link to="/contact" href="" class="text-uppercase custom_dark-btn">
                                 Contact Us
-                              </a>
+                              </router-link>
                             </div>
                           </div>
                         </div>
@@ -52,28 +50,19 @@
                         <div class="slider_item-detail">
                           <div>
                             <h1>
-                              Welcome to <br />
-                              SOUNDs
+                              {{ products.data[0].brand }} <br />
+                              {{ products.data[0].model }}
                             </h1>
                             <p>
-                              Bluetooth Headphones Over Ear, 65 Hours Playtime Wireless Headphones with Microphone,
-                              Foldable Lightweight Headset with Deep Bass,HiFi Stereo Sound for Travel Work Cellphone.
+                              {{ products.data[0].description }}
                             </p>
-                            <div class="d-flex">
-                              <a href="" class="text-uppercase custom_orange-btn mr-3">
-                                Shop Now
-                              </a>
-                              <a href="" class="text-uppercase custom_dark-btn">
-                                Contact Us
-                              </a>
-                            </div>
                           </div>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="slider_img-box">
                           <div>
-                            <img src="../assets/images/Headphone.png" alt="" style="width: 370px; margin-top: -40px; margin-left: 60px;" />
+                            <img :src="`http://127.0.0.1:8000/${products.data[0].image}`" alt="" style="width: 370px; margin-left: 60px;" />
                           </div>
                         </div>
                       </div>
@@ -91,28 +80,19 @@
                         <div class="slider_item-detail">
                           <div>
                             <h1>
-                              Welcome to <br />
-                              SOUND
+                              {{ products.data[1].brand }} <br />
+                              {{ products.data[1].model }}
                             </h1>
                             <p>
-                              Bluetooth Headphones Over Ear, 65 Hours Playtime Wireless Headphones with Microphone,
-                              Foldable Lightweight Headset with Deep Bass,HiFi Stereo Sound for Travel Work Cellphone.
+                              {{ products.data[1].description }}
                             </p>
-                            <div class="d-flex">
-                              <a href="" class="text-uppercase custom_orange-btn mr-3">
-                                Shop Now
-                              </a>
-                              <a href="" class="text-uppercase custom_dark-btn">
-                                Contact Us
-                              </a>
-                            </div>
                           </div>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="slider_img-box">
                           <div>
-                            <img src="../assets/images/Headphone.png" alt="" style="width: 370px; margin-top: -40px; margin-left: 60px;" />
+                            <img :src="`http://127.0.0.1:8000/${products.data[1].image}`" alt="" style="width: 370px; margin-left: 60px;" />
                           </div>
                         </div>
                       </div>
@@ -146,6 +126,7 @@
         <div class=" layout_padding2">
         <div class="card-deck">
           <div v-for="brand in brands.data" class="card">
+            <img class="card-img-top mb-3" style="width: 100px;" :src="`http://127.0.0.1:8000/${brand.image}`" alt="Card image cap" />
             <div class="card-body d-flex flex-column" style="gap: 15px;">
               <h5 class="card-title" style="font-size: 50px;">{{brand.name}}</h5>
               <p class="card-text">
@@ -164,9 +145,9 @@
 
     <section class="headphone_section">
       <div class="container">
-        <h2 class="custom_heading">Featured Products</h2>
+        <h2 class="custom_heading">Latest Products</h2>
         <p class="custom_heading-text">
-          Discover our curated collection of featured products—a showcase of excellence and innovation. Each item is meticulously selected for its quality, style, and cutting-edge features. Elevate your experience with these standout products, setting a new standard in superior performance and design.
+          Discover our curated collection of latest products—a showcase of excellence and innovation. Each item is meticulously selected for its quality, style, and cutting-edge features. Elevate your experience with these standout products, setting a new standard in superior performance and design.
         </p>
         <div v-for="product in products.data" class="row layout_padding2">
           <div class="col-md-8">
@@ -217,7 +198,7 @@
                       RITHYNY Lyhab
                     </h3>
                     <p class="custom_heading-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo amet a sit in dolore inventore natus excepturi fugiat, impedit aliquid atque assumenda nobis voluptatem eligendi explicabo magnam? Amet, vero nemo.
+                      Sonic Visionary at SOUND. A tech enthusiast committed to reshaping your audio encounters. With a blend of innovation and dedication, Lyhab brings you a curated selection that seamlessly blends excellence and style.
                     </p>
                   </div>
                 </div>
@@ -232,7 +213,7 @@
                       NENG Sopheap
                     </h3>
                     <p class="custom_heading-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eos neque qui, corrupti cupiditate quod in, ratione quasi distinctio id quidem libero earum tempora temporibus repellat error voluptas debitis voluptatem.
+                      Sonic Explorer at SOUND. With a dedication to innovation and a keen eye for excellence, NENG Sopheap crafts a unique audio experience for you. Dive into the world of superior sound and cutting-edge design curated by NENG Sopheap at SOUND.
                     </p>
                   </div>
                 </div>
@@ -247,7 +228,7 @@
                       SENG Enghav
                     </h3>
                     <p class="custom_heading-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates illum aliquid maxime aperiam temporibus, tenetur animi harum ipsam doloribus sapiente eos ab, magnam autem quidem, quasi asperiores fuga fugiat voluptatem.
+                      Architect of Audio Excellence at SOUND. With a passion for innovation and an unwavering commitment to superior sound quality, SENG Enghav brings a touch of brilliance to your audio journey. Immerse yourself in the curated selection of cutting-edge products designed by SENG Enghav at SOUND.
                     </p>
                   </div>
                 </div>
@@ -311,7 +292,7 @@
     </section>
 
         <!-- map section -->
-        <section class="map_section">
+    <section class="map_section">
       <div id="map" class="h-100 w-100 ">
         <iframe class="w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.7851341294067!2d104.89624328229655!3d11.570446534698315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109517388680e15%3A0x63057e6682968f5!2sInstitute%20of%20Technology%20of%20Cambodia!5e0!3m2!1sen!2skh!4v1707323925827!5m2!1sen!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>

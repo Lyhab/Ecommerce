@@ -1,5 +1,5 @@
 <template>
-      <div >
+      <div>
       <!-- header section strats -->
       <header class="header_section">
         <div class="container">

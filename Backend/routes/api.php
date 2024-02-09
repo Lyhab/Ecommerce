@@ -28,6 +28,7 @@ Route::group(['prefix' => 'v1'], function () {
 });
 
 Route::get('/v1/product/', [ProductController::class, 'getAll']);
+Route::get('/v1/product/promotion', [ProductController::class, 'getAllPromotion']);
 Route::get('/v1/product/{id}', [ProductController::class, 'getById']);
 
 Route::get('/v1/brand/', [BrandController::class, 'getAll']);

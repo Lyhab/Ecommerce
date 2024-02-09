@@ -14,7 +14,7 @@ class Product extends Model
         'discount',
         'price',
         'description',
-        'average_review',
+        'brand',
         'brand_id',
         'image'
     ];

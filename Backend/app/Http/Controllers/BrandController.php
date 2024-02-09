@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Services\FileUploadController;
 use App\Models\Brand;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Http\Request;
@@ -46,8 +47,12 @@ class BrandController extends Controller
 
             $data = $request->validate([
                 'name' => 'required|min:3',
+                'image' => 'required',
                 'description' => 'nullable|min:3'
             ]);
+
+            $image = FileUploadController::storeImage($request->file('image'), 'uploads/brands');
+            $data['image'] = $image;
 
             Brand::create($data);
 
@@ -65,6 +70,7 @@ class BrandController extends Controller
 
             $data = $request->validate([
                 'name' => 'nullable|min:3',
+                'image' => 'required',
                 'description' => 'nullable|min:3'
             ]);
 
@@ -72,6 +78,13 @@ class BrandController extends Controller
             if(!$brand){
                 return response()->json(['message' => 'Brand not found!'], Response::HTTP_NOT_FOUND);
             }
+
+        if ($request->hasFile('image')) {
+            $image = FileUploadController::storeImage($request->file('image'), 'uploads/brands');
+            if ($image) {
+                $data['image'] = $image;
+            }
+        }
 
             $brand->update($data);
 

@@ -10,19 +10,42 @@ use Illuminate\Validation\ValidationException;
 
 class ProductController extends Controller
 {
-    public function getAll()
+    public function getAll(Request $request)
     {
         try {
+            $brand_id = $request->query('brand_id');
 
-            $products = Product::paginate(4);
+            if ($request->has('brand_id')) {
+                $products = Product::where('brand_id', $brand_id)->paginate(10);
 
-            return response()->json($products, Response::HTTP_OK);
+                return response()->json($products, Response::HTTP_OK);
+            } else {
+                $products = Product::paginate(6);
+
+                return response()->json($products, Response::HTTP_OK);
+            }
         } catch (ValidationException $e) {
             return $this->handleValidationException($e);
         } catch (\Exception $e) {
             return $this->handleUnexpectedException($e);
         }
     }
+
+    public function getAllPromotion(Request $request)
+    {
+        try {
+            $products = Product::whereNotNull('discount')
+            ->where('discount', '!=', 0)
+            ->paginate(10);
+
+        return response()->json(['products' => $products]);
+        } catch (ValidationException $e) {
+            return $this->handleValidationException($e);
+        } catch (\Exception $e) {
+            return $this->handleUnexpectedException($e);
+        }
+    }
+
     public function getById(string $id)
     {
         try {
@@ -47,6 +70,7 @@ class ProductController extends Controller
                 'discount' => 'nullable',
                 'price' => 'required',
                 'description' => 'nullable|min:3',
+                'brand' => 'exists:brands,name',
                 'brand_id' => 'exists:brands,id',
                 'image' => 'required'
             ]);
@@ -73,6 +97,7 @@ class ProductController extends Controller
                 'discount' => 'nullable',
                 'price' => 'nullable',
                 'description' => 'nullable|min:3',
+                'brand' => 'exists:brands,name',
                 'brand_id' => 'exists:brands,id',
                 'image' => 'nullable|image'
             ]);
@@ -130,4 +155,10 @@ class ProductController extends Controller
         ], Response::HTTP_BAD_REQUEST);
     }
 
+    protected function handleUnexpectedException(\Exception $e)
+    {
+        return response()->json([
+            'message' => 'Server Error',
+        ], Response::HTTP_INTERNAL_SERVER_ERROR);
+    }
 }
