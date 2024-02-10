@@ -16,7 +16,7 @@ class ProductController extends Controller
             $brand_id = $request->query('brand_id');
 
             if ($request->has('brand_id')) {
-                $products = Product::where('brand_id', $brand_id)->paginate(10);
+                $products = Product::where('brand_id', $brand_id)->paginate(3);
 
                 return response()->json($products, Response::HTTP_OK);
             } else {
@@ -36,7 +36,7 @@ class ProductController extends Controller
         try {
             $products = Product::whereNotNull('discount')
             ->where('discount', '!=', 0)
-            ->paginate(10);
+            ->paginate(6);
 
         return response()->json(['products' => $products]);
         } catch (ValidationException $e) {

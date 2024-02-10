@@ -4,7 +4,7 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Image</th>
-      <th scope="col">Name</th>
+      <th scope="col">Model</th>
       <th scope="col">Price</th>
       <th scope="col">Action</th>
     </tr>
@@ -13,8 +13,8 @@
     <tr v-for="(item, index) in data">
       <th scope="row">{{ index+1 }}</th>
       <td><img :src="`http://127.0.0.1:8000/${item.image}`" alt="" class="" width="50px" /></td>
-      <td>{{ item.name }}</td>
-      <td>{{ item.price }}</td>
+      <td>{{ item.model }}</td>
+      <td>{{ item.price }} $</td>
       <td><button class="btn btn-outline-danger" @click="removeCart(item.cart_id)">Remove</button></td>
     </tr>
   </tbody>

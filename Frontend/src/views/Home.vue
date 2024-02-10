@@ -50,11 +50,11 @@
                         <div class="slider_item-detail">
                           <div>
                             <h1>
-                              {{ products.data[0].brand }} <br />
-                              {{ products.data[0].model }}
+                              {{ products.data[2].brand }} <br />
+                              {{ products.data[2].model }}
                             </h1>
                             <p>
-                              {{ products.data[0].description }}
+                              {{ products.data[2].description }}
                             </p>
                           </div>
                         </div>
@@ -62,7 +62,7 @@
                       <div class="col-md-6">
                         <div class="slider_img-box">
                           <div>
-                            <img :src="`http://127.0.0.1:8000/${products.data[0].image}`" alt="" style="width: 370px; margin-left: 60px;" />
+                            <img :src="`http://127.0.0.1:8000/${products.data[2].image}`" alt="" style="width: 370px; margin-left: 60px;" />
                           </div>
                         </div>
                       </div>
@@ -80,11 +80,11 @@
                         <div class="slider_item-detail">
                           <div>
                             <h1>
-                              {{ products.data[1].brand }} <br />
-                              {{ products.data[1].model }}
+                              {{ products.data[4].brand }} <br />
+                              {{ products.data[4].model }}
                             </h1>
                             <p>
-                              {{ products.data[1].description }}
+                              {{ products.data[4].description }}
                             </p>
                           </div>
                         </div>
@@ -92,7 +92,7 @@
                       <div class="col-md-6">
                         <div class="slider_img-box">
                           <div>
-                            <img :src="`http://127.0.0.1:8000/${products.data[1].image}`" alt="" style="width: 370px; margin-left: 60px;" />
+                            <img :src="`http://127.0.0.1:8000/${products.data[4].image}`" alt="" style="width: 370px; margin-left: 60px;" />
                           </div>
                         </div>
                       </div>
@@ -124,7 +124,7 @@
           Elevate your lifestyle with our partner brand—innovative, stylish, and committed to excellence.
         </p>
         <div class=" layout_padding2">
-        <div class="card-deck">
+        <a class="card-deck" href="shop" style="text-decoration: none; color: black;">
           <div v-for="brand in brands.data" class="card">
             <img class="card-img-top mb-3" style="width: 100px;" :src="`http://127.0.0.1:8000/${brand.image}`" alt="Card image cap" />
             <div class="card-body d-flex flex-column" style="gap: 15px;">
@@ -134,7 +134,7 @@
               </p>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       </div>
     </section>
@@ -145,19 +145,22 @@
 
     <section class="headphone_section">
       <div class="container">
-        <h2 class="custom_heading">Latest Products</h2>
+        <h2 class="custom_heading">Featured Products</h2>
         <p class="custom_heading-text">
-          Discover our curated collection of latest products—a showcase of excellence and innovation. Each item is meticulously selected for its quality, style, and cutting-edge features. Elevate your experience with these standout products, setting a new standard in superior performance and design.
+          Discover our curated collection of featured products—a showcase of excellence and innovation. Each item is meticulously selected for its quality, style, and cutting-edge features. Elevate your experience with these standout products, setting a new standard in superior performance and design.
         </p>
         <div v-for="product in products.data" class="row layout_padding2">
           <div class="col-md-8">
             <div class="headphone_detail-box">
-              <h3>
+              <h1>
                 {{ product.model }}
-              </h3>
+              </h1>
               <p class="mt-4 mb-5">
                 {{ product.description }}
               </p>
+              <h2>
+                $ {{ product.price }}
+              </h2>
               <div>
                 <button @click="addToCart(product.id)" class="custom_dark-btn"> Add to cart </button>
               </div>

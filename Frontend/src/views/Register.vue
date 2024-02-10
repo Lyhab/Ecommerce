@@ -6,19 +6,19 @@
       <div class="name-name">
         <div>Name</div>
         <input v-model="name" type="name" placeholder="Enter your name"
-          style="width: 100%; height: 60%; border-radius: 10px; border: 0.5px solid ABA2A2; font-size: 15px;">
+          style="width: 100%; min-height: 51px; border-radius: 10px; border: 1px solid #ccc; font-size: 15px; padding-left: 15px;">
       </div>
 
       <div class="Email">
         <div>Email</div>
         <input v-model="email" type="email" placeholder="Enter your email"
-          style="width: 100%; height: 60%; border-radius: 10px; border: 0.5px solid ABA2A2; font-size: 15px;">
+        style="width: 100%; min-height: 51px; border-radius: 10px; border: 1px solid #ccc; font-size: 15px; padding-left: 15px;">
       </div>
 
       <div class="Password">
         <div>Password</div>
         <input v-model="password" type="password" placeholder="Enter your password"
-          style="width: 100%; height: 60%; border-radius: 10px; border: 0.5px solid ABA2A2; font-size: 15px;">
+        style="width: 100%; min-height: 51px; border-radius: 10px; border: 1px solid #ccc; font-size: 15px; padding-left: 15px;">
       </div>
 
 

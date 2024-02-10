@@ -31,7 +31,7 @@ class CartController extends BaseCrudController
 
             $items = Cart::join('products', 'carts.product_id', '=', 'products.id')
                 ->where('carts.user_id', $userId)
-                ->select('products.id as product_id', 'products.name', 'products.price', 'carts.id as cart_id', 'products.image as image')
+                ->select('products.id as product_id', 'products.model', 'products.price', 'carts.id as cart_id', 'products.image as image')
                 ->get();
 
             return response()->json($items, Response::HTTP_OK);

@@ -57,9 +57,6 @@
             </h5>
             <ul>
               <li>
-                Anker
-              </li>
-              <li>
                 Apple
               </li>
               <li>
@@ -70,9 +67,6 @@
               </li>
               <li>
                 JBL
-              </li>
-              <li>
-                Sennheiser
               </li>
               <li>
                 Skullcandy
